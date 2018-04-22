@@ -1,0 +1,12 @@
+1. Access & Security
+2. Keypairs
+3. create keypair, download it
+4. chmod 400 xanatower.pem
+5. ssh -i xanatower.pem ubuntu@43.240.98.27 >>> at the directory
+
+attaching new volumes
+
+sudo fdisk -l
+
+sudo mkfs.ext4 /dev/vda
+
