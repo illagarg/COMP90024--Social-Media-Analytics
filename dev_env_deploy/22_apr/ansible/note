@@ -8,3 +8,14 @@ ansible-playbook install.yml --private-key=xanatower.pem -i host
 question , all the packages going to be installed to this, would this be deleted when restart?
 /dev/vda1       9.9G  1.1G  8.4G  11% /
 
+
+set 115.146.86.170 as main node
+
+
+
+115.146.86.96 ansible_user=ubuntu
+115.146.86.172 ansible_user=ubuntu
+115.146.86.34 ansible_user=ubuntu
+115.146.86.170 ansible_user=ubuntu
+
+

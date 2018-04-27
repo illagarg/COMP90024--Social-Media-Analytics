@@ -3,12 +3,42 @@
 #Start couchdb and the harvesting_twitter service
 
 #create a dir for tesing
-- file:
-    path: /home/ubuntu/test
-    state: directory
-    mode: 0755
+#- file:
+#    path: /home/ubuntu/test
+#    state: directory
+#    mode: 0755
 
   #now mount all /dev/vdc to /volume1/
 
+#- name: Mount up device
+#  mount:
+#    path: /volume1/
+#    src: /dev/vdc
+#    fstype: ext4
+#    state: mounted
+
+#install docker io
+#- name: Update repositories cache and install docker.io package
+#  apt:
+#    name: docker.io
+#    update_cache: yes
+
+#- name: 'lock password user for ansible user'
+#  become: yes
+#  command: usermod -a -G docker ubuntu
+
+#now docker belongs to user ubuntu
 
 
+
+#
+
+#put remove here just in case
+#- name: Remove "foo" package
+#  apt: name=foo state=absent
+
+
+
+
+
+#now try to manage package

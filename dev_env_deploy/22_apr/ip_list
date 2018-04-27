@@ -12,9 +12,6 @@ mountpoint /mount dir
 
 
 ssh -i xanatower.pem ubuntu@115.146.86.170
-
-
-sudo umount /dev/vdc /volume1 
 works with output of 
 
 umount: /volume1: not mounted
@@ -31,5 +28,12 @@ sudo chown ubuntu /volume1/
 
 
 after rebuilding instance, the mounting point is gone but the volume folder is still there
+
+
+(sudo umount /dev/vdc /volume1
+sudo mkdir /opt/couchdb
+sudo mount /dev/vdc /opt/couchdb -t auto 
+sudo mkdir /opt/couchdb/data
+sudo mkdir /opt/couchdb/etc)
 
 
