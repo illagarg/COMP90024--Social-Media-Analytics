@@ -28,7 +28,7 @@ def auth():
 def create_instance(ec2_conn):
 
     reservation = ec2_conn.run_instances(
-        'ami-8aac485a', key_name='xanatower', instance_type='m1.medium', security_groups=['default'], placement='melbourne-qh2')
+        'ami-16030760', key_name='xanatower', instance_type='m1.medium', security_groups=['default'], placement='melbourne-qh2')
 
     instance = reservation.instances[0]
 
@@ -61,7 +61,7 @@ def get_all_instances(ec2_conn):
 def attach_vol(ec2_conn, instance):
 
     # Request	volume:
-    vol_req = ec2_conn.create_volume(120, 'melbourne-qh2')
+    vol_req = ec2_conn.create_volume(60, 'melbourne-qh2')
 
     # Check	provisioning	status:
     curr_vols = ec2_conn.get_all_volumes([vol_req.id])

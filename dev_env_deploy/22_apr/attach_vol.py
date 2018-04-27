@@ -4,8 +4,15 @@ ec2_conn = auth()
 instances = []
 instances = get_all_instances(ec2_conn)
 
-attach_vol(ec2_conn, instances[0])
+for i in instances:
+    attach_vol(ec2_conn, i)
 
+'''
+#temp use stuffs
+attach_vol(ec2_conn, instances[0])
+attach_vol(ec2_conn, instances[1])
+attach_vol(ec2_conn, instances[2])
+'''
 
 '''
 Traceback (most recent call last):

@@ -1,0 +1,14 @@
+
+#This script install couchdb, install the harvesting twitter.
+#Start couchdb and the harvesting_twitter service
+
+#create a dir for tesing
+- file:
+    path: /home/ubuntu/test
+    state: directory
+    mode: 0755
+
+  #now mount all /dev/vdc to /volume1/
+
+
+
