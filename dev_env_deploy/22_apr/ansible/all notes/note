@@ -106,16 +106,8 @@ docker run -d -p 5984:5984 -v $(pwd):/opt/couchdb/data --name couchdb@115_146_86
 
 
 
-(export declare nodes=(115.146.86.96 115.146.86.172 115.146.86.34)
-export masternode=`echo ${nodes} | cut -f1 -d' '`
-export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
-export size=${#nodes[@]}
-export user=admin
-export pass=password)
 
-curl -XPUT "http://115.146.86.96:5984/_node/_local/_config/admins/${user}" --data "\"${pass}\""
-    
-curl -XPUT "http://${user}:${pass}@${node}:5984/_node/couchdb@${node}/_config/chttpd/bind_address" --data '"0.0.0.0"'
+
 
 
 (sudo mkdir /opt/couchdb
@@ -123,6 +115,45 @@ sudo mount /dev/vdc /opt/couchdb -t auto
 sudo mkdir /opt/couchdb/data
 sudo mkdir /opt/couchdb/etc)
 
+
+sudo umount /dev/vdc /opt/couchdb
+
+(sudo usermod -a -G docker $USER
+sudo mkdir ~/data
+sudo chown ubuntu ~/data
+sudo mount /dev/vdc ~/data -t auto 
+sudo mkdir ~/data/couchdb/data
+sudo mkdir ~/data/couchdb/etc)
+
+
+(sudo umount /dev/vdc /opt/couchdb
+sudo mkdir ~/data
+sudo chown ubuntu ~/data
+sudo mount /dev/vdc ~/data -t auto 
+sudo mkdir ~/data/couchdb/data
+sudo mkdir ~/data/couchdb/etc
+sudo usermod -a -G docker $USER)
+
+docker run -d -p 5984:5984 -v $(pwd):/opt/couchdb/data --name couchdb@172  apache/couchdb:2.1.1
+
+
+(export declare nodes=(115.146.86.96 115.146.86.172 115.146.86.34)
+export masternode=`echo ${nodes} | cut -f1 -d' '`
+export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
+export size=${#nodes[@]}
+export user=admin
+export pass=password)
+
+curl -X PUT "http://115.146.86.172:5984/_node/_local/_config/admins/${user}" --data "\"${pass}\""
+    
+curl -X PUT "http://${user}:${pass}@115.146.86.172:5984/_node/couchdb172/_config/chttpd/bind_address" --data '"0.0.0.0"'
+
+sudo usermod -a -G docker $USER
+
+
+https://github.com/redgeoff/redgeoff-couchdb-docker
+
+https://github.com/redgeoff/redgeoff-couchdb-docker/blob/master/create-cluster.sh
 
 
 
