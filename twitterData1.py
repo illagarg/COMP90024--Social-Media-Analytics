@@ -89,7 +89,7 @@ class StreamListener(tweepy.StreamListener):
 def call_stream():
     try:
         l = tweepy.streaming.Stream(auth, StreamListener())
-        l.filter(locations=[110.95,-54.83,159.29,-11.35])
+        l.filter(locations=[144.5937,-38.59,145.5125,-37.5113])
     except Exception as ex:
         warnings.warn("Streaming failed")
 
