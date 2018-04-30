@@ -1,0 +1,54 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang ='en'>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %} CCC2018-17 {% endblock %}</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >CCC2018-17</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{%url 'home'%}">Home</a></li>
+      <!--<li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>-->
+    <!-- </ul>
+   <ul class="nav navbar-nav navbar-right">-->
+	 
+      <li><a href="{%url 'team'%}"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+	  <li><a href="{%url 'git'%}"><span class="glyphicon glyphicon-new-window"></span> Git</a></li>
+	  <li><a href="{%url 'projectinfo'%}"><span class="glyphicon glyphicon-briefcase"></span> Project Specifications</a></li>
+	   <li>
+        <button class="btn btn-default dropdown-toggle" style="background-color:#222; border:none;  color: #9d9d9d; padding-top:15px;" type="button" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-log-out"></span>
+      Scenarios <span class="caret"></span>
+        </button>
+		 <ul class="dropdown-menu" style="background-color:black;">
+		<li><a href="{%url 'scenario1'%}"><span class="glyphicon glyphicon-log-out"></span><font color="#9d9d9d"> Scenario 1</font></a></li>
+		<li><a href="{%url 'scenario2'%}"><span class="glyphicon glyphicon-log-out"></span><font color="#9d9d9d"> Scenario 2</font></a></li>
+		<li><a href="{%url 'scenario3'%}"><span class="glyphicon glyphicon-log-out"></span><font color="#9d9d9d"> Scenario 3</font></a></li>
+		<li><a href="{%url 'scenario4'%}"><span class="glyphicon glyphicon-log-out"></span><font color="#9d9d9d"> Scenario 4</font></a></li>
+		<ul></li>
+	  
+    </ul>
+  </div>
+</nav>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
