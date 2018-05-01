@@ -231,8 +231,4 @@ docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v
 stuffs at single_node.sh
 
 
-#deleting all lines in vim
-gg
-dG
-
 

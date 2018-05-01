@@ -1,0 +1,23 @@
+ubuntu@r-bnzxildp-0:~/data$ ./test.sh 
+3
+creating container
+83e9a6f91d6743794d2bd3ae2bb36d3d3e1894cae2faa55fd721df37e8244e0a
+DO IT WORK?
+YES
+83e9a6f91d67
+write things to the config files
+restart container after
+83e9a6f91d67
+DOES SETTING UP ADMIN AND ADDING NODES WORK?
+""
+"any"
+yes
+ubuntu@r-bnzxildp-0:~/data$ docker ps
+CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS               NAMES
+83e9a6f91d67        apache/couchdb:2.1.1   "tini -- /docker-e..."   44 seconds ago      Up 39 seconds                           tender_almeida
+ubuntu@r-bnzxildp-0:~/data$ docker inspect -f '{{ .Mounts }}' 83e9a6f91d67
+[{volume 788a27070d8e862cde0be29714ffcf79fc5b5fcb9e83177025a567a918e6523c /var/lib/docker/volumes/788a27070d8e862cde0be29714ffcf79fc5b5fcb9e83177025a567a918e6523c/_data /opt/couchdb/data local  true }]
+
+
+
+

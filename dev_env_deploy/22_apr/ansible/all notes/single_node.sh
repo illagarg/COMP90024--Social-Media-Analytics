@@ -1,10 +1,17 @@
-( declare nodes=(115.146.86.34 115.146.86.96 115.146.86.172)
+(declare nodes=(115.146.86.34 115.146.86.96 115.146.86.172)
 export masternode=`echo ${nodes} | cut -f1 -d' '` #the first element in that array
 export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
 export size=${#nodes[@]}
 export user=admin
-export pass=password )
+export pass=password)
 
+
+(nodes=(115.146.86.34 115.146.86.96 115.146.86.172)
+masternode=`echo ${nodes} | cut -f1 -d' '` #the first element in that array
+othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
+size=${#nodes[@]}
+user=admin
+pass=password)
 
 #run these on each machine curl -X POST -H "Content-Type: application/json" 
 #http://admin:password@127.0.0.1:5984/_cluster_setup -d '{"action": "enable_cluster", 
@@ -15,20 +22,22 @@ docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v
 
 docker create -v ~/data:/opt/couchdb/data -p 5984:5984 --net=host apache/couchdb:2.1.1
 
-declare -a conts=(`docker ps --all | grep couchdb | cut -f1 -d' ' | xargs -n${size} -d"\n" `)
-
-(for cont in "${conts[@]}"; do docker start ${cont}; done
-sleep 3)
+declare -a conts=(`docker ps --all | grep couchdb | cut -f1 -d' ' | xargs -n${size} -d"\n"`)
 
 
 
-(docker exec ${conts[0]} \
+for cont in "${conts[@]}"; do docker start ${cont}; done
+sleep 3
+
+
+
+docker exec ${conts[0]} \
 bash -c "echo \"-setcookie couchdb_cluster\" >> /opt/couchdb/etc/vm.args"
 docker exec ${conts[0]} \
-bash -c "echo \"-name couchdb@115.146.86.34\" >> /opt/couchdb/etc/vm.args")
+bash -c "echo \"-name couchdb@115.146.86.34\" >> /opt/couchdb/etc/vm.args"
 
-(for cont in "${conts[@]}"; do docker restart ${cont}; done
-sleep 3)
+for cont in "${conts[@]}"; do docker restart ${cont}; done
+sleep 3
 
 
   
