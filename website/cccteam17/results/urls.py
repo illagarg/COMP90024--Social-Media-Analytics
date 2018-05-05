@@ -10,6 +10,7 @@ urlpatterns = [
 	url(r'^scenario2/', views.scenario2, name='scenario2'),
 	url(r'^scenario3/', views.scenario3, name='scenario3'),
 	url(r'^scenario4/', views.scenario4, name='scenario4'),
+	url(r'^scenario5/', views.scenario5, name='scenario5'),
 	url(r'^home/$', views.Home, name='home'),
 	url(r'^git/$', views.git, name='git'),
 	url(r'^$', views.Home, name='home'),
