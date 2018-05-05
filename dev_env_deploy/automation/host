@@ -1,0 +1,5 @@
+[dbservers]
+115.146.85.192 ansible_user=ubuntu
+115.146.86.208 ansible_user=ubuntu
+
+
