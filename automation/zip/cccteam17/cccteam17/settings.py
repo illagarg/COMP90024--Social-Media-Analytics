@@ -27,7 +27,9 @@ DEBUG = True
 
 
 #ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']
-ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']
+#ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.85.242' ]
+
+ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.85.242' ]
 
 # Application definition
 

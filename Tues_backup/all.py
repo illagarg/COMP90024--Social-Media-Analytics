@@ -111,13 +111,7 @@ def write_host_file(IP):
             f.write("[mainnode]\r\n")
             f.write("%s ansible_user=ubuntu\r\n" % ip)
             f.write("\r\n")
-            counter = counter+1
-        elif counter == 1:
-            f.write("[masterdbnode]\r\n")
-            f.write("%s ansible_user=ubuntu\r\n" % ip)
-            f.write("\r\n")
             f.write("[dbservers]\r\n")
-            f.write("%s ansible_user=ubuntu\r\n" % ip)
             counter = counter+1
         else:
             f.write("%s ansible_user=ubuntu\r\n" % ip)

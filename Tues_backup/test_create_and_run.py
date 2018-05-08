@@ -1,13 +1,5 @@
 from all import *
 from subprocess import call
-import sys
-
-
-def wait(sec):
-    while sec > 0:
-        print(str(sec) + '     \r')
-        sec -= 1
-        time.sleep(1)
 
 
 ec2_conn_my = auth(confidential.pt_id, confidential.pt_key)
@@ -42,13 +34,13 @@ all_res = ec2_conn_my.get_all_reservations()
 print('Index\tID\t\tInatance')
 for idx, res in enumerate(all_res):
     print('{}\t{}\t{}'.format(idx, res.id, res.instances))
-
+'''
 all_res = ec2_conn_vad.get_all_reservations()
 print('Index\tID\t\tInatance')
 for idx, res in enumerate(all_res):
     print('{}\t{}\t{}'.format(idx, res.id, res.instances))
 
-
+'''
 instances_1 = get_all_instances(ec2_conn_my)
 instances_2 = get_all_instances(ec2_conn_vad)
 
@@ -76,7 +68,7 @@ for i in instances:
     IP.append(i.private_ip_address)
 
 
-write_host_file(IP)
+write_host_file_temp(IP)
 print("write IP file success")
 
 # attach persiitance volume to all the VMs
@@ -90,34 +82,10 @@ print("write IP file success")
 # https: // stackoverflow.com/questions/37099632/running-ansible-playbook-using-the-python-api
 
 # NOW run the ansible playbook
-# now to to replay a IP in
-# /home/x/COMP90024--Social-Media-Analytics/automation/zip/cccteam17/cccteam17
-
-# Replace the zip package before shipping it
 
 
-string_1 = "REPLACE_THIS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']"
+time.sleep(30)
 
-string_2 = (
-    "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '%s' ]" % IP[0])
-
-string_3 = "/home/x/COMP90024--Social-Media-Analytics/automation/zip/cccteam17/cccteam17/settings.py"
-
-call(["rpl", string_1, string_2, string_3])
-
-print("REPLACED DJANGO SETTING")
-
-# now zip the package
-# zip -r zip.zip zip/
-call(["zip", "-r", "zip.zip", "zip/"])
-
-
-wait(60)
-
-
-# now I have a file call zip.zip to be ship in the dir
-
-# now run the play book to ship the package
 call(["ansible-playbook", "install.yml",
       "--private-key=xanatower.pem", "-i", "host"])
 

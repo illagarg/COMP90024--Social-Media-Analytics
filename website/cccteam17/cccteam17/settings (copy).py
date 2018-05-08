@@ -26,8 +26,8 @@ SECRET_KEY = '__2plrx&71-=sdzqlq_sk#&1j3fr&_jggysq%rcgk*gaygfxmx'
 DEBUG = True
 
 
-#ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']
-ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']
+ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']
+
 
 # Application definition
 
