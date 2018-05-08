@@ -1,0 +1,337 @@
+ansible-playbook install.yml --private-key=xanatower.pem -i host
+
+ansible-playbook install.yml --private-key=xanatower.pem -i host
+
+
+
+
+question , all the packages going to be installed to this, would this be deleted when restart?
+/dev/vda1       9.9G  1.1G  8.4G  11% /
+
+
+set 115.146.86.170 as main node
+remember volume 1 is the mount point
+
+
+115.146.86.96 
+115.146.86.172 
+115.146.86.34 
+115.146.86.170 
+
+(docker stop $(docker ps -a -q) &&
+docker rm $(docker ps -a -q) )
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb -v opt/couchdb/:opt/couchdb/
+
+sudo docker run -d --name couchdb \
+  --log-opt max-size=100m \
+  --restart always \
+  -p 5984:5984 \
+  -p 5986:5986 \
+  -p 4369:4369 \
+  -p 9100-9200:9100-9200 \
+  -v /home/ubuntu/common:/home/couchdb/common \
+  -e COUCHDB_DATA_DIR="/home/couchdb/common/data" \
+  -e COUCHDB_USER='admin' \
+  -e COUCHDB_HASHED_PASSWORD='-pbkdf2-b1eb7a68b0778a529c68d30749954e9e430417fb,4da0f8f1d98ce649a9c5a3845241ae24,10' \
+  -e COUCHDB_COOKIE='mycookie' \
+  -e COUCHDB_SECRET='mysecret' \
+  -e COUCHDB_NODE_NAME='DB1-PRIVATE-IP' \
+  redgeoff/couchdb
+
+
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb --volume /opt/couchdb/data:/opt/couchdb/data --volume /opt/couchdb/etc/local.d:/opt/couchdb/etc/local.d
+
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb --name test --mount type=bind,source=/opt/couchdb/data,target=/opt/couchdb/data
+
+
+
+
+(echo "deb https://apache.bintray.com/couchdb-deb {distribution} main" \
+    | sudo tee -a /etc/apt/sources.list  )
+
+
+
+
+
+
+docker create couchdb:2.1.1 -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb --volume /opt/couchdb/data : /opt/couchdb/data -- volume /opt/couchdb/etc/local.d : /opt/couchdb/etc/local.d
+
+
+#create datasbse called database_name
+
+curl -X PUT http://admin:password@127.0.0.1:5984/database_name
+
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb -e COUCHDB_DATA_DIR="/opt/couchdb/data"
+
+
+sudo find . -name *.couch
+
+docker inspect container_id
+
+
+sudo apt-get purge couchdb
+
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb --name test --mount type=bind,source=/opt/couchdb/data,target=/opt/couchdb/data
+
+docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb --volume /home/ubuntu/:/opt/couchdb/data
+
+
+$ docker run -p 5984:5984 --volume /home/ubuntu/:/opt/couchdb/data --volume ~/etc/local.d:/opt/couchdb/etc/local.d --env COUCHDB_USER=admin --env COUCHDB_PASSWORD=password apache/couchdb:2.1.1
+
+
+docker pull apache/couchdb:1.7.1
+sudo docker run -d -p 5984:5984 -v $(pwd):/usr/local/var/lib/couchdb --name couchdb apache/couchdb:1.7.1
+curl localhost:5984
+curl -X PUT http://admin:password@127.0.0.1:5984/database_name
+curl -X PUT http://127.0.0.1:5984/database_name
+ls
+
+
+docker pull couchdb:2.1.1
+sudo docker run -d -p 5984:5984 -v $(pwd):/opt/couchdb/data --name couchdb apache/couchdb:2.1.1
+
+
+
+
+(sudo umount /dev/vdc /volume1
+sudo mkdir /opt/couchdb
+sudo mount /dev/vdc /opt/couchdb -t auto 
+sudo mkdir /opt/couchdb/data
+sudo mkdir /opt/couchdb/etc)
+
+docker run -d -p 5984:5984 -v $(pwd):/opt/couchdb/data --name couchdb@115_146_86_96  apache/couchdb:2.1.1
+
+
+
+
+sudo apt-get update && sudo apt-get install docker.io
+
+
+
+(sudo mkdir /opt/couchdb
+sudo mount /dev/vdc /opt/couchdb -t auto 
+sudo mkdir /opt/couchdb/data
+sudo mkdir /opt/couchdb/etc)
+
+
+sudo umount /dev/vdc /opt/couchdb
+
+(sudo mkdir ~/data
+sudo chown ubuntu ~/data
+sudo mount /dev/vdc ~/data -t auto 
+sudo mkdir ~/data/couchdb/data
+sudo mkdir ~/data/couchdb/etc
+sudo usermod -a -G docker $USER)
+
+
+(sudo umount /dev/vdc /opt/couchdb
+sudo mkdir ~/data
+sudo chown ubuntu ~/data
+sudo mount /dev/vdc ~/data -t auto 
+sudo mkdir ~/data/couchdb/data
+sudo mkdir ~/data/couchdb/etc
+sudo usermod -a -G docker $USER)
+
+docker run -d -p 5984:5984 -v $(pwd):/opt/couchdb/data --name couchdb172  apache/couchdb:2.1.1
+
+
+(export declare nodes=(115.146.86.96 115.146.86.172 115.146.86.34)
+export masternode=`echo ${nodes} | cut -f1 -d' '`
+export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
+export size=${#nodes[@]}
+export user=admin
+export pass=password)
+
+curl -X PUT "http://115.146.86.172:5984/_node/_local/_config/admins/${user}" --data "\"${pass}\""
+    
+curl -X PUT "http://${user}:${pass}@115.146.86.172:5984/_node/couchdb172/_config/chttpd/bind_address" --data '"0.0.0.0"'
+
+sudo usermod -a -G docker $USER
+
+
+https://github.com/redgeoff/redgeoff-couchdb-docker
+
+https://github.com/redgeoff/redgeoff-couchdb-docker/blob/master/create-cluster.sh
+
+
+curl -X PUT http://$user:$password@$firstIp:$localPort/_nodes/couchdb@$ip -d {}
+
+
+curl -X PUT http://115.146.86.172:5984/_nodes/couchdb@115.146.86.172 -d {}
+
+
+
+curl -X PUT http://115.146.86.172:5984/_nodes/couchdb@115.146.86.172 -d {}
+{"ok":true,"id":"couchdb@115.146.86.172","rev":"1-967a00dff5e02add41819138abb3284d"}
+ubuntu@r-
+
+
+
+
+
+curl -X PUT http://115.146.86.172:5984/_nodes/couchdb@115.146.86.96 -d {}
+
+#playing with 96 and 172 right now
+
+curl -X POST -H "Content-Type: application/json" http://admin:password@127.0.0.1:5984/_cluster_setup -d '{"action": "enable_cluster", "bind_address":"0.0.0.0", "username": "admin", "password":"password", "node_count":"2"}'
+
+docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v $(pwd):/opt/couchdb/data --name couchdb172  apache/couchdb:2.1.1
+
+docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v $(pwd):/opt/couchdb/data --name couchdb96  apache/couchdb:2.1.1
+
+
+
+ubuntu@r-bnzxildp-0:~/data$ rm _nodes.couch 
+ubuntu@r-bnzxildp-0:~/data$ rm _users.couch 
+ubuntu@r-bnzxildp-0:~/data$ rm _dbs.couch 
+ubuntu@r-bnzxildp-0:~/data$ rm _replicator.couch
+
+
+docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v $(pwd):/opt/couchdb/data --name couchdb32  apache/couchdb:2.1.1
+
+
+curl -X PUT http://admin:password@115.146.86.96:5984/_nodes
+
+
+{"error":"file_exists","reason":"The database could not be created, the file already exists."}
+{"error":"conflict","reason":"Document update conflict."}
+{"error":"not_found","reason":"no such node: couchdb@115.146.86.96"}
+{"error":"file_exists","reason":"The database could not be created, the file already exists."}
+{"ok":true,"id":"couchdb@115.146.86.172","rev":"1-967a00dff5e02add41819138abb3284d"}
+{"error":"not_found","reason":"no such node: couchdb@115.146.86.172"}
+{"error":"file_exists","reason":"The database could not be created, the file already exists."}
+{"ok":true,"id":"couchdb@115.146.86.34","rev":"1-967a00dff5e02add41819138abb3284d"}
+{"error":"not_found","reason":"no such node: couchdb@115.146.86.34"}
+
+
+ curl -XPUT "http://$admin:password@localhost:5984/_node/couchdb@115.146.85.34/_config/chttpd/bind_address" --data '"0.0.0.0"'
+
+docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v $(pwd):/opt/couchdb/data --name couchdb96  apache/couchdb:2.1.1 -net=host
+
+
+(docker stop $(docker ps -a -q) &&
+docker rm $(docker ps -a -q) &&
+docker volume prune
+)
+
+
+(cd data
+rm _nodes.couch &&
+rm _users.couch &&
+rm _dbs.couch &&
+rm _replicator.couch)
+
+docker run -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v ~/data:/opt/couchdb/data --name couchdb96  apache/couchdb:2.1.1 -net=host
+
+stuffs at single_node.sh
+
+
+(cd couchDB/
+rm -R data/
+rm -R etc/)
+
+
+output
+x@x:~/COMP90024--Social-Media-Analytics/dev_env_deploy/automation$ python ansible_test.py 
+
+PLAY [dbservers] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [115.146.85.192]
+ok: [115.146.86.208]
+
+TASK [dbservers : example copying file with owner and permissions] *************
+changed: [115.146.85.192]
+changed: [115.146.86.208]
+
+TASK [dbservers : COMMAND] *****************************************************
+ [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather
+than running sudo
+
+changed: [115.146.86.208]
+changed: [115.146.85.192]
+
+TASK [dbservers : debug] *******************************************************
+ok: [115.146.85.192] => {
+    "out.stdout_lines": []
+}
+ok: [115.146.86.208] => {
+    "out.stdout_lines": []
+}
+
+TASK [dbservers : COMMAND] *****************************************************
+changed: [115.146.85.192]
+changed: [115.146.86.208]
+
+TASK [dbservers : debug] *******************************************************
+ok: [115.146.85.192] => {
+    "out.stdout_lines": [
+        "", 
+        "Creating ini file ", 
+        "", 
+        "changing ownership of the whole couchDB folder", 
+        "Declaring nodes, master nodes variables", 
+        "", 
+        "Creating docker container", 
+        "dd477a642ea5bc310fb16726fb161142eb9c6c23d7bdbf28a9ff54d8d108d902", 
+        "", 
+        "DOES DECLARE CONTS WORK?", 
+        "YES", 
+        "", 
+        "dd477a642ea5", 
+        "write things to the config files", 
+        "", 
+        "restart container after", 
+        "dd477a642ea5", 
+        "", 
+        "SETTING UP ADMIN AND ADDING NODES", 
+        "\"\"", 
+        "\"127.0.0.1\"", 
+        "{\"couchdb\":\"Welcome\",\"version\":\"2.1.1\",\"features\":[\"scheduler\"],\"vendor\":{\"name\":\"The Apache Software Foundation\"}}", 
+        "yes"
+    ]
+}
+ok: [115.146.86.208] => {
+    "out.stdout_lines": [
+        "", 
+        "Creating ini file ", 
+        "", 
+        "changing ownership of the whole couchDB folder", 
+        "Declaring nodes, master nodes variables", 
+        "", 
+        "Creating docker container", 
+        "f63f0bab58323915c9ae4859b04e8c75f7fd47962b99741fe4923043252d1767", 
+        "", 
+        "DOES DECLARE CONTS WORK?", 
+        "YES", 
+        "", 
+        "f63f0bab5832", 
+        "write things to the config files", 
+        "", 
+        "restart container after", 
+        "f63f0bab5832", 
+        "", 
+        "SETTING UP ADMIN AND ADDING NODES", 
+        "\"\"", 
+        "\"127.0.0.1\"", 
+        "{\"couchdb\":\"Welcome\",\"version\":\"2.1.1\",\"features\":[\"scheduler\"],\"vendor\":{\"name\":\"The Apache Software Foundation\"}}", 
+        "yes"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+115.146.85.192             : ok=6    changed=3    unreachable=0    failed=0   
+115.146.86.208             : ok=6    changed=3    unreachable=0    failed=0   
+
+x@x:~/COMP90024--Social-Media-Analytics/dev_env_deploy/automation$ 
+
+
+
+
+
+

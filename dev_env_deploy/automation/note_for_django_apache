@@ -1,0 +1,44 @@
+sudo pip install Django--1.6
+
+
+
+python manage.py 
+
+
+link apache with django
+
+
+vi /etc/apache2/sites-available/000-default.conf
+
+-------------------------------------------------------------------
+
+<VirtualHost *:80>
+        ServerName cccteam17.com
+        ServerAlias www.cccteam17.com
+        ServerAdmin ttteenu94@gmail.com
+
+        DocumentRoot /var/www/cccteam17
+        WSGIScriptAlias / /var/www/cccteam17/cccteam17/wsgi.py
+
+        ErrorLog /var/www/logs/error.log
+        CustomLog /var/www/logs/custom.log combined
+</VirtualHost>
+
+
+
+
+-------------------------------------------------------------------------
+WSGIPythonPath /var/www/cccteam17
+
+
+
+
+
+
+sudo mkdir /var/www/logs
+sudo chmod 777 /var/www/logs
+service apache2 restart
+
+
+
+

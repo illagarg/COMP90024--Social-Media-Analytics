@@ -101,3 +101,32 @@ def attach_vol(ec2_conn, instance):
 def security_groups(ec2_conn):
     gp = ec2_conn.get_all_security_groups()
     print gp
+
+
+def write_host_file(IP):
+    f = open("host", "w+")
+    counter = 0
+    for ip in IP:
+        if counter == 0:
+            f.write("[mainnode]\r\n")
+            f.write("%s ansible_user=ubuntu\r\n" % ip)
+            f.write("\r\n")
+            f.write("[dbservers]\r\n")
+            counter = counter+1
+        else:
+            f.write("%s ansible_user=ubuntu\r\n" % ip)
+    f.close()
+
+
+def write_host_file_temp(IP):
+    f = open("host", "w+")
+    counter = 0
+    for ip in IP:
+        if counter == 0:
+            f.write("[mainnode]\r\n")
+            f.write("%s ansible_user=ubuntu\r\n" % ip)
+            f.write("\r\n")
+            f.write("[dbservers]\r\n")
+            counter = counter+1
+        f.write("%s ansible_user=ubuntu\r\n" % ip)
+    f.close()

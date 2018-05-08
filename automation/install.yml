@@ -5,6 +5,10 @@
 #  roles:
 #     - dbservers
 
+- hosts: dbservers
+  roles:
+    - dbservers
+    
 - hosts: mainnode
   roles:
     - mainnode

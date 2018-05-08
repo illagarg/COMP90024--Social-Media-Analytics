@@ -1,0 +1,21 @@
+perl -pi -e 's/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']/REPLACE!!!!/g' setting.py
+
+
+sed -i -e 's/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.96']/g' settings.py
+
+
+ex -sc '%s/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.170']/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.96']/g|x' settings.py
+
+
+sed -i -e 's/ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']/ALLOWED_HOSTS = ['www.cccteam17.com','cccteam.com','115.146.86.96']/g' settings.py
+
+
+rpl "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']" "REPLACED!" settings.py
+
+
+#FINALLY WORKING COMMAND
+rpl "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']" "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com',' $abc' ]" settings.py
+
+
+rpl "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']" "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com',' $abc' ]" ~/COMP90024--Social-Media-Analytics/dev_env_deploy/settings.py
+

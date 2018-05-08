@@ -1,5 +1,4 @@
-
 - file:
-    path: /home/ubuntu/DBSERVER
+    path: /home/ubuntu/MAINNODE
     state: directory
     mode: 0755

@@ -3,25 +3,19 @@ from all import *
 
 ec2_conn = auth(confidential.vadi_id, confidential.vadi_key)
 
+
+gp = ec2_conn.get_all_security_groups()
+print gp[0]
+
 '''
-# terminate all instances before we start
-# TESTING PURPOSE ONLY!!!!
-instances = get_all_instances(ec2_conn)
-for i in instances:
-    ec2_conn.terminate_instances(instance_ids=[i.id])
-    print("terminated one insstance")
-
-for i in instances:
-    print(i.state)
-
-
-print("terminated all instances\n")
+default = gp[0]
+default.authorize('tcp', 22, 22, '0.0.0.0/0')
+default.authorize('tcp', 5984, 5984, '0.0.0.0/0')
 '''
-
 print("now start creating instances")
 # for testing purpose, I only create 3 other instances
 # size is the number of instance I want to create
-size = 2
+size = 1
 for i in range(0, size):
     new_instance = create_instance(ec2_conn, 'ami-16030760', 'm1.small')
 

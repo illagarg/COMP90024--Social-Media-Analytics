@@ -1,10 +1,7 @@
 #Playhood that desploy the webserver, hervesting service and web server
 
 
-#- hosts: dbservers
-#  roles:
-#     - dbservers
-
-- hosts: mainnode
+- hosts: dbservers
+  sudo: yes
   roles:
-    - mainnode
+     - dbservers

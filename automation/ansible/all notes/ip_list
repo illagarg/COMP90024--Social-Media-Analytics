@@ -1,0 +1,39 @@
+i-26274f4a:115.146.86.96  done
+i-824d88f8:115.146.86.172  done
+i-74c502d4:115.146.86.34  done 
+i-850cf255:115.146.86.170 done main node
+
+
+
+
+check mount: df-h
+or
+mountpoint /mount dir
+
+
+ssh -i xanatower.pem ubuntu@115.146.86.170
+works with output of 
+
+umount: /volume1: not mounted
+
+
+
+sudo mkfs.ext4 /dev/vdc
+sudo mkdir /volume1
+sudo mount /dev/vdc /home/ubuntu/ -t auto
+sudo chown ubuntu /home/ubuntu/
+
+sudo mount /dev/vdc /volume1/ -t auto
+sudo chown ubuntu /volume1/
+
+
+after rebuilding instance, the mounting point is gone but the volume folder is still there
+
+
+(sudo umount /dev/vdc /volume1
+sudo mkdir /opt/couchdb
+sudo mount /dev/vdc /opt/couchdb -t auto 
+sudo mkdir /opt/couchdb/data
+sudo mkdir /opt/couchdb/etc)
+
+

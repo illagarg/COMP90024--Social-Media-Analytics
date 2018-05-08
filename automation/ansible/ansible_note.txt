@@ -1,0 +1,49 @@
+inventories: 
+host list etc
+
+
+static inventory:
+
+
+
+playbook 
+
+tasks: do 
+
+---
+- name: install stuffs
+ host:web //tell it when inventory it should use
+  become_method: sudo
+ become_user: root
+ vars: 
+ http_port: 80
+
+...
+
+
+tasks:
+
+
+
+handler: mkae sure services restart
+
+
+modules: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
