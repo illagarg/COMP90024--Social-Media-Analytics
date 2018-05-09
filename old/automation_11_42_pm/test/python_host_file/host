@@ -1,7 +1,0 @@
-[mainnode]
-115.116.0.1 ansible_user=ubuntu
-
-[dbservers]
-115.116.0.2 ansible_user=ubuntu
-115.116.0.3 ansible_user=ubuntu
-115.116.0.4 ansible_user=ubuntu

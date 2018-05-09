@@ -1,37 +1,28 @@
 from all import *
-from subprocess import call
-import sys
 
 
 ec2_conn_my = auth(confidential.pt_id, confidential.pt_key)
-ec2_conn_vad = auth(confidential.vadi_id, confidential.vadi_key)
 
 
 print("now start creating instances")
-# for testing purpose, I only create 3 other instances
 # size is the number of instance I want to create
-size = 2
-for i in range(0, size):
-    new_instance = create_instance(ec2_conn_my, 'ami-16030760', 'm1.small')
-    new_instance = create_instance(ec2_conn_vad, 'ami-16030760', 'm1.small')
+size = 4
+UBUNTU_16_04_LTS = 'ami-16030760'
 
-print()
+for i in range(0, size):
+    new_instance = create_instance(ec2_conn_my, UBUNTU_16_04_LTS, 'm1.medium')
+
 
 all_res = ec2_conn_my.get_all_reservations()
 print('Index\tID\t\tInatance')
 for idx, res in enumerate(all_res):
     print('{}\t{}\t{}'.format(idx, res.id, res.instances))
 
-all_res = ec2_conn_vad.get_all_reservations()
-print('Index\tID\t\tInatance')
-for idx, res in enumerate(all_res):
-    print('{}\t{}\t{}'.format(idx, res.id, res.instances))
+instances = get_all_instances(ec2_conn_my)
 
-
-instances_1 = get_all_instances(ec2_conn_my)
-instances_2 = get_all_instances(ec2_conn_vad)
-
-instances = [instances_1[0], instances_1[1], instances_2[0], instances_2[1]]
+# attched persistance vol to dev/vdc in all instance
+for i in instances:
+    attach_vol(ec2_conn_my, i)
 
 # check new instance running status, if not running, keep checking and dont do anything
 for i in instances:

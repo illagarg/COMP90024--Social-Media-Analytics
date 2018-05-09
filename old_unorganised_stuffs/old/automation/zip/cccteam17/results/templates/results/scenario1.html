@@ -1,0 +1,92 @@
+{% extends 'results/base.html' %}
+{% block title %} CCC2018-17 {% endblock%}
+{% block head %}
+{{ block.super }}
+  <style type="text/css">
+#map_wrapper {
+    height: 400px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="thumbnail container " style="background-color:lightsilver;  border-style: solid; border-width: 5px;">
+		<div  align="left" style = " width =600px  " >
+			<h3 align="left">Scenario 1  - Description  :<br/></h3>
+			<p style="padding-left:10px">Which city has the most tweeters and does this correlate with what we might expect from the population demographic of the cities from AURIN, e.g. more young people live in a given area so we might expect a proportionate increase in the number of tweets (assuming young people tweet more)?</p>
+		</div>
+		<div id="map_canvas" style="width:100%;height:500px;"></div>
+		<div id="barchart"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+function myMap() {
+    var map;
+    var myCenter=new google.maps.LatLng(-30.3636,134.2117);
+	var mapOptions = {center: myCenter, zoom: 4.4};       
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+	
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+	var locations={{ maps_list|safe }};
+	
+     for (i = 0; i < locations.length; i++) { 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent("City:" + locations[i].cityname+"<br/>"+locations[i].infotitle+" : "+locations[i].infomsg+"<br/>"+locations[i].infotitle2+" : "+locations[i].infomsg2);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSHY2NJxQHVenuL0N4up_h5LMqm6n45Fc&callback=myMap"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var locations={{ maps_list|safe }};
+var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Cities');
+data.addColumn('number', 'Avg no: of tweets per user'); 
+data.addColumn('number', 'Youth Population %');
+data.addRows(locations.length);
+for  (var i = 0; i < locations.length; i++){
+  data.setCell(i,0,locations[i].cityname);
+  data.setCell(i,1,locations[i].infomsg);
+  data.setCell(i,2,locations[i].infomsg2);
+
+}
+  
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Avg no: of tweets per user  vs Youth Population Percentage', 'width':700,  'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+  chart.draw(data, options);
+
+}
+</script>
+</div>
+
+
+
+
+
+{% endblock %}

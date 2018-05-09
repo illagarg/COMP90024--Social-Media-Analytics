@@ -21,14 +21,14 @@
   become: yes
   filesystem:
     fstype: ext4
-    dev: /dev/vdb
+    dev: /dev/vdc
 
 #now mount all /dev/vdc to ~/couchDB
 - name: Mount up device
   become: yes
   mount:
     path: /home/ubuntu/couchDB
-    src: /dev/vdb
+    src: /dev/vdc
     fstype: ext4
     state: mounted
 

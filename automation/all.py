@@ -4,18 +4,23 @@ import time
 from subprocess import call
 
 
+import sys
+
+
 '''
 Autentification
 '''
 
 
 class confidential:
-    group_id = '7176ba4f906c43038cb33debbd058782'
-    group_key = 'b1cf0de2b19344e69bc5e984db1b183f'
-    pt_id = '535a9867907b4fd089829318875ddc29'
-    pt_key = '76bb6de86df044729000c8b7c4c520c7'
-    vadi_id = '743c2ca61f904abfa2d712fe8804318f'
-    vadi_key = '6b1b1b3178544d31bad675159ad8e9c2'
+    #group_id = '7176ba4f906c43038cb33debbd058782'
+    #group_key = 'b1cf0de2b19344e69bc5e984db1b183f'
+    #pt_id = '535a9867907b4fd089829318875ddc29'
+    #pt_key = '76bb6de86df044729000c8b7c4c520c7'
+    #vadi_id = '743c2ca61f904abfa2d712fe8804318f'
+    #vadi_key = '6b1b1b3178544d31bad675159ad8e9c2'
+    pt_id = 'your_id'
+    pt_key = 'your_key'
 
 
 def auth(id, key):
@@ -31,17 +36,6 @@ def auth(id, key):
     return ec2_conn
 
 
-# ami-8aac485a NeCTAR Ubuntu 14.04 (Trusty) amd64
-# keyname is the keypair we created on nectar
-# instant_type: instant size m1.small etc
-# security_groups  =['default']
-# 1.58.34
-
-# image 'ami-16030760' is ubuntu 16.04
-
-# image should be a string indicating what image we using to boot the instance
-
-# 'm1.medium'
 def create_instance(ec2_conn, image, type):
 
     reservation = ec2_conn.run_instances(
@@ -103,6 +97,8 @@ def security_groups(ec2_conn):
     gp = ec2_conn.get_all_security_groups()
     print gp
 
+# this function will generate a host file for the ansible playbook to read
+
 
 def write_host_file(IP):
     f = open("host", "w+")
@@ -138,6 +134,8 @@ def write_host_file_temp(IP):
         f.write("%s ansible_user=ubuntu\r\n" % ip)
     f.close()
 
+# this function replce the IP parameter for a shell script
+
 
 def replace_ip_in_shell(IP):
 
@@ -165,6 +163,8 @@ def replace_ip_in_shell(IP):
 
     print("REPLACED test_1_2.sh")
 
+# this function replce the IP parameter for setting.py in django
+
 
 def replace_ip_in_django(IP):
     string_1 = "REPLACE_THIS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']"
@@ -175,6 +175,8 @@ def replace_ip_in_django(IP):
     string_3 = "/home/x/COMP90024--Social-Media-Analytics/automation/zip/cccteam17/cccteam17/settings.py"
 
     call(["rpl", string_1, string_2, string_3])
+
+# wait 60 min function
 
 
 def wait(sec):
