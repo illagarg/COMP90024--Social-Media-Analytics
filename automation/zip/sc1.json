@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4283" } },
+                                                                                
+"features": [
+{ "cityname": "Canberra", "latlong": [-35.2809,149.1300], "pop":367752 },
+{ "cityname": "Sydney", "latlong": [-33.8688,151.2093],  "pop":4627345 },
+{ "cityname": "Melbourne", "latlong": [-37.8136,144.9631],  "pop":4246375},
+{ "cityname": "Perth", "latlong": [-31.9505,115.8605],  "pop": 1896548},
+{ "cityname": "Adelaide", "latlong": [-34.9285,138.6007],  "pop":1225235 },
+{ "cityname": "Alice Springs", "latlong": [-23.6980,133.8807], "pop":25186 },
+{ "cityname": "Brisbane", "latlong": [-27.4698,153.0251],  "pop":2189878},
+{ "cityname": "Mackay", "latlong": [-21.1425,149.1821],  "pop":74219 },
+{ "cityname": "Hobart", "latlong": [-42.8821,147.3272],  "pop":216656 },
+{ "cityname": "Gold Coast", "latlong": [-28.0167,153.4000],  "pop":591473 },
+{ "cityname": "Newcastle", "latlong": [-32.9283,151.7817],  "pop":308308 },
+{ "cityname": "Wollongong", "latlong": [-34.4278,150.8931],  "pop":292190 }
+]
+}

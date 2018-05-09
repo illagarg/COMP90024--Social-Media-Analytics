@@ -1,0 +1,93 @@
+{
+  "Adelaide": {
+    "SOL_German_P": 34,
+    "SOL_In_Ar_Lang_Urdu_P": 13,
+    "SOL_Se_As_A_L_Tagal_P": 53,
+    "SOL_In_Ar_Lang_Beng_P": 42,
+    "SOL_In_Ar_Lang_Othr_P": 58,
+    "SOL_French_P": 65,
+    "SEO_Persons": 6426,
+    "SOL_Se_As_A_L_Othr_P": 87,
+    "SOL_Greek_P": 135,
+    "SOL_Russian_P": 25,
+    "SOL_Japanese_P": 74,
+    "SOL_Khmer_P": 7,
+    "SOL_Assyrian_P": 4,
+    "SOL_Se_As_A_L_Tot_P": 253,
+    "SOL_Samoan_P": 0,
+    "SOL_Ir_Lang_Dari_P": 13,
+    "SOL_Maltese_P": 0,
+    "SOL_Chin_lang_Mand_P": 1811,
+    "SOL_In_Ar_Lang_Tot_P": 226,
+    "SOL_Tamil_P": 41,
+    "SOL_Serbian_P": 12,
+    "SOL_In_Ar_Lang_Punj_P": 13,
+    "SOL_Iran_Lan_Tot_P": 99,
+    "SOL_Italian_P": 151,
+    "SOL_Dutch_P": 26,
+    "SOL_Croatian_P": 16,
+    "SOL_Irani_Lan_Othr_P": 0,
+    "SOL_Turkish_P": 6,
+    "SOL_Se_As_A_L_Indon_P": 62,
+    "SOL_Macedonian_P": 0,
+    "SOL_Aus_Indig_Lang_P": 9,
+    "SOL_Se_As_A_L_Filipino_P": 51,
+    "SOL_Korean_P": 256,
+    "SOL_In_Ar_Lang_Sinh_P": 37,
+    "SOL_Chin_lang_Other_P": 252,
+    "SOL_Chin_lang_Cant_P": 598,
+    "SOL_Ir_La_Pe_excl_Da_P": 86,
+    "SOL_Arabic_P": 286,
+    "SOL_Vietnamese_P": 84,
+    "SOL_In_Ar_Lang_Hind_P": 63,
+    "SOL_Thai_P": 59,
+    "SOL_Chin_lang_Tot_P": 2661,
+    "SOL_Hungarian_P": 3,
+    "SOL_Spanish_P": 120,
+    "SOL_Portuguese_P": 26,
+    "SOL_Polish_P": 50
+},
+  "AliceSprings": {
+  "SOL_German_P": 0, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 0, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 0, "SEO_Persons": 161, "SOL_Se_As_A_L_Othr_P": 0, "SOL_Greek_P": 0, "SOL_Russian_P": 0, "SOL_Japanese_P": 3, "SOL_Khmer_P": 0, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 12, "SOL_Samoan_P": 0, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 0, "SOL_Chin_lang_Mand_P": 0, "SOL_In_Ar_Lang_Tot_P": 14, "SOL_Tamil_P": 0, "SOL_Serbian_P": 0, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 0, "SOL_Italian_P": 3, "SOL_Dutch_P": 0, "SOL_Croatian_P": 0, "SOL_Irani_Lan_Othr_P": 0, "SOL_Turkish_P": 0, "SOL_Se_As_A_L_Indon_P": 0, "SOL_Macedonian_P": 0, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 0, "SOL_Korean_P": 3, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 0, "SOL_Ir_La_Pe_excl_Da_P": 0, "SOL_Arabic_P": 0, "SOL_Vietnamese_P": 0, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 3, "SOL_Chin_lang_Tot_P": 11, "SOL_Hungarian_P": 0, "SOL_Spanish_P": 0, "SOL_Portuguese_P": 0, "SOL_Polish_P": 0
+  
+},
+"Brisbane": {
+  "SOL_German_P": 47, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 31, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 75, "SEO_Persons": 3769, "SOL_Se_As_A_L_Othr_P": 0, "SOL_Greek_P": 39, "SOL_Russian_P": 30, "SOL_Japanese_P": 147, "SOL_Khmer_P": 5, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 134, "SOL_Samoan_P": 3, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 3, "SOL_Chin_lang_Mand_P": 615, "SOL_In_Ar_Lang_Tot_P": 119, "SOL_Tamil_P": 27, "SOL_Serbian_P": 0, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 49, "SOL_Italian_P": 50, "SOL_Dutch_P": 16, "SOL_Croatian_P": 0, "SOL_Irani_Lan_Othr_P": 0, "SOL_Turkish_P": 3, "SOL_Se_As_A_L_Indon_P": 58, "SOL_Macedonian_P": 0, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 8, "SOL_Korean_P": 494, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 174, "SOL_Ir_La_Pe_excl_Da_P": 49, "SOL_Arabic_P": 153, "SOL_Vietnamese_P": 43, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 57, "SOL_Chin_lang_Tot_P": 826, "SOL_Hungarian_P": 7, "SOL_Spanish_P": 139, "SOL_Portuguese_P": 122, "SOL_Polish_P": 17
+  },
+  "Canberra": {
+ "SOL_German_P": 1881, "SOL_In_Ar_Lang_Urdu_P": 1299, "SOL_Se_As_A_L_Tagal_P": 1043, "SOL_In_Ar_Lang_Beng_P": 1363, "SOL_In_Ar_Lang_Othr_P": 1200, "SOL_French_P": 1601, "SEO_Persons": 277566, "SOL_Se_As_A_L_Othr_P": 379, "SOL_Greek_P": 2773, "SOL_Russian_P": 718, "SOL_Japanese_P": 881, "SOL_Khmer_P": 339, "SOL_Assyrian_P": 46, "SOL_Se_As_A_L_Tot_P": 3261, "SOL_Samoan_P": 389, "SOL_Ir_Lang_Dari_P": 283, "SOL_Maltese_P": 153, "SOL_Chin_lang_Mand_P": 6652, "SOL_In_Ar_Lang_Tot_P": 8465, "SOL_Tamil_P": 1412, "SOL_Serbian_P": 1139, "SOL_In_Ar_Lang_Punj_P": 970, "SOL_Iran_Lan_Tot_P": 1085, "SOL_Italian_P": 3303, "SOL_Dutch_P": 592, "SOL_Croatian_P": 2403, "SOL_Irani_Lan_Othr_P": 96, "SOL_Turkish_P": 240, "SOL_Se_As_A_L_Indon_P": 1014, "SOL_Macedonian_P": 580, "SOL_Aus_Indig_Lang_P": 106, "SOL_Se_As_A_L_Filipino_P": 825, "SOL_Korean_P": 1541, "SOL_In_Ar_Lang_Sinh_P": 1319, "SOL_Chin_lang_Other_P": 843, "SOL_Chin_lang_Cant_P": 3478, "SOL_Ir_La_Pe_excl_Da_P": 706, "SOL_Arabic_P": 2413, "SOL_Vietnamese_P": 3786, "SOL_In_Ar_Lang_Hind_P": 2314, "SOL_Thai_P": 795, "SOL_Chin_lang_Tot_P": 10973, "SOL_Hungarian_P": 358, "SOL_Spanish_P": 2914, "SOL_Portuguese_P": 480, "SOL_Polish_P": 1140
+    
+  },
+"GoldCoast": {
+  "SOL_German_P": 2467, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 1399, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 1829, "SEO_Persons": 452056, "SOL_Se_As_A_L_Othr_P": 298, "SOL_Greek_P": 1609, "SOL_Russian_P": 960, "SOL_Japanese_P": 4794, "SOL_Khmer_P": 146, "SOL_Assyrian_P": 68, "SOL_Se_As_A_L_Tot_P": 3199, "SOL_Samoan_P": 632, "SOL_Ir_Lang_Dari_P": 99, "SOL_Maltese_P": 337, "SOL_Chin_lang_Mand_P": 4331, "SOL_In_Ar_Lang_Tot_P": 3162, "SOL_Tamil_P": 236, "SOL_Serbian_P": 1104, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 840, "SOL_Italian_P": 2585, "SOL_Dutch_P": 1040, "SOL_Croatian_P": 1215, "SOL_Irani_Lan_Othr_P": 97, "SOL_Turkish_P": 619, "SOL_Se_As_A_L_Indon_P": 574, "SOL_Macedonian_P": 262, "SOL_Aus_Indig_Lang_P": 47, "SOL_Se_As_A_L_Filipino_P": 928, "SOL_Korean_P": 2831, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 575, "SOL_Chin_lang_Cant_P": 2529, "SOL_Ir_La_Pe_excl_Da_P": 644, "SOL_Arabic_P": 1638, "SOL_Vietnamese_P": 659, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 1036, "SOL_Chin_lang_Tot_P": 7435, "SOL_Hungarian_P": 731, "SOL_Spanish_P": 2366, "SOL_Portuguese_P": 1134, "SOL_Polish_P": 912
+  
+},
+"Hobart": {
+  "SOL_German_P": 3, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 0, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 12, "SEO_Persons": 1480, "SOL_Se_As_A_L_Othr_P": 0, "SOL_Greek_P": 9, "SOL_Russian_P": 6, "SOL_Japanese_P": 14, "SOL_Khmer_P": 7, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 0, "SOL_Samoan_P": 0, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 0, "SOL_Chin_lang_Mand_P": 0, "SOL_In_Ar_Lang_Tot_P": 42, "SOL_Tamil_P": 0, "SOL_Serbian_P": 0, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 0, "SOL_Italian_P": 7, "SOL_Dutch_P": 13, "SOL_Croatian_P": 6, "SOL_Irani_Lan_Othr_P": 0, "SOL_Turkish_P": 0, "SOL_Se_As_A_L_Indon_P": 0, "SOL_Macedonian_P": 0, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 0, "SOL_Korean_P": 3, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 0, "SOL_Ir_La_Pe_excl_Da_P": 0, "SOL_Arabic_P": 11, "SOL_Vietnamese_P": 13, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 6, "SOL_Chin_lang_Tot_P": 105, "SOL_Hungarian_P": 3, "SOL_Spanish_P": 7, "SOL_Portuguese_P": 3, "SOL_Polish_P": 6
+    
+  },
+"Mackay":{
+  "SOL_German_P": 15, "SOL_In_Ar_Lang_Urdu_P": 7, "SOL_Se_As_A_L_Tagal_P": 135, "SOL_In_Ar_Lang_Beng_P": 11, "SOL_In_Ar_Lang_Othr_P": 31, "SOL_French_P": 14, "SEO_Persons": 2957, "SOL_Se_As_A_L_Othr_P": 3, "SOL_Greek_P": 9, "SOL_Russian_P": 0, "SOL_Japanese_P": 15, "SOL_Khmer_P": 0, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 248, "SOL_Samoan_P": 3, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 3, "SOL_Chin_lang_Mand_P": 48, "SOL_In_Ar_Lang_Tot_P": 85, "SOL_Tamil_P": 0, "SOL_Serbian_P": 3, "SOL_In_Ar_Lang_Punj_P": 13, "SOL_Iran_Lan_Tot_P": 0, "SOL_Italian_P": 28, "SOL_Dutch_P": 6, "SOL_Croatian_P": 0, "SOL_Irani_Lan_Othr_P": 0, "SOL_Turkish_P": 3, "SOL_Se_As_A_L_Indon_P": 6, "SOL_Macedonian_P": 0, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 104, "SOL_Korean_P": 9, "SOL_In_Ar_Lang_Sinh_P": 3, "SOL_Chin_lang_Other_P": 7, "SOL_Chin_lang_Cant_P": 5, "SOL_Ir_La_Pe_excl_Da_P": 0, "SOL_Arabic_P": 0, "SOL_Vietnamese_P": 13, "SOL_In_Ar_Lang_Hind_P": 20, "SOL_Thai_P": 8, "SOL_Chin_lang_Tot_P": 60, "SOL_Hungarian_P": 0, "SOL_Spanish_P": 9, "SOL_Portuguese_P": 13, "SOL_Polish_P": 12
+  
+},
+"Melbourne": {
+ "SOL_German_P": 71, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 47, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 168, "SEO_Persons": 6328, "SOL_Se_As_A_L_Othr_P": 208, "SOL_Greek_P": 49, "SOL_Russian_P": 47, "SOL_Japanese_P": 174, "SOL_Khmer_P": 16, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 1410, "SOL_Samoan_P": 4, "SOL_Ir_Lang_Dari_P": 3, "SOL_Maltese_P": 7, "SOL_Chin_lang_Mand_P": 0, "SOL_In_Ar_Lang_Tot_P": 779, "SOL_Tamil_P": 157, "SOL_Serbian_P": 22, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 57, "SOL_Italian_P": 156, "SOL_Dutch_P": 16, "SOL_Croatian_P": 16, "SOL_Irani_Lan_Othr_P": 3, "SOL_Turkish_P": 28, "SOL_Se_As_A_L_Indon_P": 1101, "SOL_Macedonian_P": 14, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 54, "SOL_Korean_P": 596, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 0, "SOL_Ir_La_Pe_excl_Da_P": 51, "SOL_Arabic_P": 353, "SOL_Vietnamese_P": 218, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 389, "SOL_Chin_lang_Tot_P": 5547, "SOL_Hungarian_P": 12, "SOL_Spanish_P": 182, "SOL_Portuguese_P": 52, "SOL_Polish_P": 32
+  
+},
+"Newcastle": {
+ "SOL_German_P": 16, "SOL_In_Ar_Lang_Urdu_P": 3, "SOL_Se_As_A_L_Tagal_P": 7, "SOL_In_Ar_Lang_Beng_P": 4, "SOL_In_Ar_Lang_Othr_P": 6, "SOL_French_P": 16, "SEO_Persons": 1913, "SOL_Se_As_A_L_Othr_P": 4, "SOL_Greek_P": 17, "SOL_Russian_P": 3, "SOL_Japanese_P": 0, "SOL_Khmer_P": 0, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 21, "SOL_Samoan_P": 3, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 0, "SOL_Chin_lang_Mand_P": 33, "SOL_In_Ar_Lang_Tot_P": 20, "SOL_Tamil_P": 0, "SOL_Serbian_P": 0, "SOL_In_Ar_Lang_Punj_P": 4, "SOL_Iran_Lan_Tot_P": 22, "SOL_Italian_P": 10, "SOL_Dutch_P": 3, "SOL_Croatian_P": 3, "SOL_Irani_Lan_Othr_P": 6, "SOL_Turkish_P": 0, "SOL_Se_As_A_L_Indon_P": 6, "SOL_Macedonian_P": 5, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 4, "SOL_Korean_P": 3, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 7, "SOL_Ir_La_Pe_excl_Da_P": 16, "SOL_Arabic_P": 24, "SOL_Vietnamese_P": 0, "SOL_In_Ar_Lang_Hind_P": 3, "SOL_Thai_P": 5, "SOL_Chin_lang_Tot_P": 40, "SOL_Hungarian_P": 0, "SOL_Spanish_P": 12, "SOL_Portuguese_P": 6, "SOL_Polish_P": 9
+  
+},
+"Wollongong": {
+    "SOL_German_P": 67, "SOL_In_Ar_Lang_Urdu_P": 27, "SOL_Se_As_A_L_Tagal_P": 46, "SOL_In_Ar_Lang_Beng_P": 40, "SOL_In_Ar_Lang_Othr_P": 66, "SOL_French_P": 27, "SEO_Persons": 10416, "SOL_Se_As_A_L_Othr_P": 6, "SOL_Greek_P": 287, "SOL_Russian_P": 27, "SOL_Japanese_P": 33, "SOL_Khmer_P": 3, "SOL_Assyrian_P": 10, "SOL_Se_As_A_L_Tot_P": 118, "SOL_Samoan_P": 4, "SOL_Ir_Lang_Dari_P": 3, "SOL_Maltese_P": 13, "SOL_Chin_lang_Mand_P": 787, "SOL_In_Ar_Lang_Tot_P": 225, "SOL_Tamil_P": 40, "SOL_Serbian_P": 323, "SOL_In_Ar_Lang_Punj_P": 4, "SOL_Iran_Lan_Tot_P": 100, "SOL_Italian_P": 280, "SOL_Dutch_P": 30, "SOL_Croatian_P": 55, "SOL_Irani_Lan_Othr_P": 0, "SOL_Turkish_P": 163, "SOL_Se_As_A_L_Indon_P": 35, "SOL_Macedonian_P": 552, "SOL_Aus_Indig_Lang_P": 4, "SOL_Se_As_A_L_Filipino_P": 31, "SOL_Korean_P": 41, "SOL_In_Ar_Lang_Sinh_P": 13, "SOL_Chin_lang_Other_P": 306, "SOL_Chin_lang_Cant_P": 129, "SOL_Ir_La_Pe_excl_Da_P": 97, "SOL_Arabic_P": 438, "SOL_Vietnamese_P": 138, "SOL_In_Ar_Lang_Hind_P": 75, "SOL_Thai_P": 101, "SOL_Chin_lang_Tot_P": 1222, "SOL_Hungarian_P": 12, "SOL_Spanish_P": 149, "SOL_Portuguese_P": 56, "SOL_Polish_P": 39
+  
+},
+"Perth":
+{
+  "SOL_German_P": 67, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 43, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 89, "SEO_Persons": 5222, "SOL_Se_As_A_L_Othr_P": 37, "SOL_Greek_P": 54, "SOL_Russian_P": 27, "SOL_Japanese_P": 100, "SOL_Khmer_P": 4, "SOL_Assyrian_P": 0, "SOL_Se_As_A_L_Tot_P": 221, "SOL_Samoan_P": 6, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 0, "SOL_Chin_lang_Mand_P": 348, "SOL_In_Ar_Lang_Tot_P": 233, "SOL_Tamil_P": 21, "SOL_Serbian_P": 30, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 26, "SOL_Italian_P": 200, "SOL_Dutch_P": 24, "SOL_Croatian_P": 21, "SOL_Irani_Lan_Othr_P": 3, "SOL_Turkish_P": 3, "SOL_Se_As_A_L_Indon_P": 120, "SOL_Macedonian_P": 15, "SOL_Aus_Indig_Lang_P": 7, "SOL_Se_As_A_L_Filipino_P": 21, "SOL_Korean_P": 105, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 43, "SOL_Chin_lang_Cant_P": 222, "SOL_Ir_La_Pe_excl_Da_P": 23, "SOL_Arabic_P": 103, "SOL_Vietnamese_P": 177, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 83, "SOL_Chin_lang_Tot_P": 613, "SOL_Hungarian_P": 3, "SOL_Spanish_P": 99, "SOL_Portuguese_P": 53, "SOL_Polish_P": 54
+  },
+"Sydney": {
+  "SOL_German_P": 39, "SOL_In_Ar_Lang_Urdu_P": 0, "SOL_Se_As_A_L_Tagal_P": 55, "SOL_In_Ar_Lang_Beng_P": 0, "SOL_In_Ar_Lang_Othr_P": 0, "SOL_French_P": 119, "SEO_Persons": 3767, "SOL_Se_As_A_L_Othr_P": 9, "SOL_Greek_P": 47, "SOL_Russian_P": 45, "SOL_Japanese_P": 196, "SOL_Khmer_P": 9, "SOL_Assyrian_P": 3, "SOL_Se_As_A_L_Tot_P": 1238, "SOL_Samoan_P": 0, "SOL_Ir_Lang_Dari_P": 0, "SOL_Maltese_P": 0, "SOL_Chin_lang_Mand_P": 0, "SOL_In_Ar_Lang_Tot_P": 322, "SOL_Tamil_P": 46, "SOL_Serbian_P": 6, "SOL_In_Ar_Lang_Punj_P": 0, "SOL_Iran_Lan_Tot_P": 26, "SOL_Italian_P": 95, "SOL_Dutch_P": 25, "SOL_Croatian_P": 15, "SOL_Irani_Lan_Othr_P": 3, "SOL_Turkish_P": 19, "SOL_Se_As_A_L_Indon_P": 1154, "SOL_Macedonian_P": 10, "SOL_Aus_Indig_Lang_P": 0, "SOL_Se_As_A_L_Filipino_P": 20, "SOL_Korean_P": 787, "SOL_In_Ar_Lang_Sinh_P": 0, "SOL_Chin_lang_Other_P": 0, "SOL_Chin_lang_Cant_P": 885, "SOL_Ir_La_Pe_excl_Da_P": 23, "SOL_Arabic_P": 93, "SOL_Vietnamese_P": 189, "SOL_In_Ar_Lang_Hind_P": 0, "SOL_Thai_P": 992, "SOL_Chin_lang_Tot_P": 2922, "SOL_Hungarian_P": 6, "SOL_Spanish_P": 121, "SOL_Portuguese_P": 67, "SOL_Polish_P": 24
+  
+}
+}

@@ -1,0 +1,65 @@
+{% extends 'results/base.html' %}
+{% block title %} CCC2018-17 {% endblock%}
+{% block head %}
+{{ block.super }}
+  <style type="text/css">
+#map_wrapper {
+    height: 400px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="thumbnail container " style="background-color:lightsilver;  border-style: solid; border-width: 5px;">
+		<div  align="left" style = " width =600px  " >
+			<h3 align="left">Scenario 3  - Description  :<br/></h3>
+			<p style="padding-left:10px">Is there a correlation between crime related tweets and official crime statistics across the
+cities of Australia?</p>
+		</div>
+		<div id="map_canvas" style="width:100%;height:500px;"></div>
+<script>
+
+function myMap() {
+    var map;
+    var myCenter=new google.maps.LatLng(-25.3636,134.2117);
+	var mapOptions = {center: myCenter, zoom: 4.5};       
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+	
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+	var locations={{ maps_list|safe }};
+	
+    for (i = 0; i < locations.length; i++) { 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+        map: map,
+	title: locations[i].cityname     
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i].infotitle+" : "+locations[i].infomsg);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSHY2NJxQHVenuL0N4up_h5LMqm6n45Fc&callback=myMap"></script>
+
+</div>
+
+
+
+
+
+{% endblock %}

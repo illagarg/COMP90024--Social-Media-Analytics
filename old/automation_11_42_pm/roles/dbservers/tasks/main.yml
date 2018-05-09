@@ -1,0 +1,95 @@
+
+#This script install couchdb, install the harvesting twitter.
+#Start couchdb and the harvesting_twitter service
+
+#try to run a script
+#- name: Transfer and execute a script.
+#  become: yes
+#  script: /home/x/COMP90024--Social-Media-Analytics/dev_env_deploy/automation/shell/test.sh
+#  register: out
+
+#- debug: var=out.stdout_lines
+
+#create a dir for data storage under ~/
+- file:
+    path: /home/ubuntu/couchDB
+    state: directory
+    mode: 0755
+
+#in the actual script this will be vdc REMEMBER TO CHANGE THIS !!
+- name: Create a ext4 filesystem on /dev/vdb and check disk blocks
+  become: yes
+  filesystem:
+    fstype: ext4
+    dev: /dev/vdb
+
+#now mount all /dev/vdc to ~/couchDB
+- name: Mount up device
+  become: yes
+  mount:
+    path: /home/ubuntu/couchDB
+    src: /dev/vdb
+    fstype: ext4
+    state: mounted
+
+
+#install docker io
+- name: Update repositories cache and install docker.io package
+  become: yes
+  apt:
+    name: docker.io
+    update_cache: yes
+
+- name: 'make ubuntu a owner of docker too'
+  become: yes
+  command: usermod -a -G docker ubuntu
+
+
+- name: 'install VIM'
+  become: yes 
+  command: sudo apt-get install -y vim
+  register: out
+- debug: var=out.stdout_lines
+
+#the below is upload and run
+
+
+- name: COPY part one of shell script to every node
+  copy:
+    src: /home/x/COMP90024--Social-Media-Analytics/automation/shell/test_1_2.sh
+    dest: /home/ubuntu/test_1_2.sh
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
+
+
+- name: 'Make the script runnable'
+  become: yes 
+  command: sudo chmod +x test_1_2.sh
+  register: out
+- debug: var=out.stdout_lines
+
+
+- name: example copying file with owner and permissions
+  copy:
+    src: /home/x/COMP90024--Social-Media-Analytics/automation/shell/test_2.sh
+    dest: /home/ubuntu/test_2.sh
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
+
+
+- name: 'Make the script runnable'
+  become: yes 
+  command: sudo chmod +x test_2.sh
+  register: out
+- debug: var=out.stdout_lines
+
+#THIS IS FOR MAINDBNODE ROLE
+- name: 'Run the script to configure couchdb using docker'
+  become: yes 
+  command: ./test_1_2.sh
+  register: out
+- debug: var=out.stdout_lines
+
+

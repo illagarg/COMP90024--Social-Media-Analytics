@@ -1,0 +1,46 @@
+- name: example copying file with owner and permissions
+  copy:
+    src: /home/x/COMP90024--Social-Media-Analytics/automation/zip.zip
+    dest: /home/ubuntu/zip.zip
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
+
+- name: 'Install Unzip'
+  become: yes 
+  command: sudo apt-get install -y unzip
+  register: out
+- debug: var=out.stdout_lines
+
+
+#guessing all files will be under ~/zip
+- name: Unarchive
+  unarchive:
+    src: /home/ubuntu/zip.zip
+    dest: /home/ubuntu
+    remote_src: yes
+
+- name: example copying file with owner and permissions
+  copy:
+    src: /home/x/COMP90024--Social-Media-Analytics/automation/shell/total_apache.sh
+    dest: /home/ubuntu/total_apache.sh
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
+
+
+- name: 'Make the script runnable'
+  become: yes 
+  command: sudo chmod +x total_apache.sh
+  register: out
+- debug: var=out.stdout_lines
+
+- name: 'Run the script to install apache and django'
+  become: yes 
+  command: ./total_apache.sh
+  register: out
+- debug: var=out.stdout_lines
+
+
+
+

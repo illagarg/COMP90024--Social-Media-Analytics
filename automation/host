@@ -1,0 +1,10 @@
+[mainnode]
+115.146.85.238 ansible_user=ubuntu
+
+[masterdbnode]
+115.146.86.216 ansible_user=ubuntu
+
+[dbservers]
+115.146.86.216 ansible_user=ubuntu
+115.146.87.5 ansible_user=ubuntu
+115.146.87.13 ansible_user=ubuntu

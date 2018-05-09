@@ -1,0 +1,37 @@
+{% extends 'results/base.html' %}
+{% block title %} CCC2018-17 {% endblock%}
+{% block content %}
+
+	<br/>
+	<div class="thumbnail container " style="background-color:lightsilver;  border-style: solid; border-width: 5px;">
+		<div   style = " width =600px  " >
+			<h3 align="center">Cluster and Cloud Computing (COMP90024)<br/> Assignment 2 - 
+Australian Social Media Analytics<br/></h3>
+<br/>
+			<h4 align="left" style="padding-left:20px">Australia is one of the most beautiful countries in the world and there are so many fun, amazing facts about it.</h4>
+<h1 align="center"> DID YOU KNOW?? </h1>
+<h3>
+  <ul>
+  <li>Australia is the 6th largest country in the world. </li>
+  <li>It is the second most multicultural country in the world.</li>
+  <li>Australia is one of the world's most highly urbanised countries.</li>
+  <li>It has one of the world's lowest populations densities.</li>
+  <li>Australia's coastline stretches almost 50,000 kilometres and is linked by over 10,000 beaches, more than any other country in the world.</li> </h3>
+<br/> <h4>
+These amazing facts makes us curious to know about the people in Australia: does the language correlate with the cultures, are people happier in more wealthier areas, crime rates in Australia, alcohol shops in different locations, and the use of vulgar languages in different areas? Which is the most popular tourist destination? and so on.
+Social media is a great platform to showcase our feelings to the world. Here we take tweets from Twitter,one of the most widely used social medium and correlate it with the data we acquired from various sources especially AURIN.
+<br/><br/> Below are some quick links to the scenarios:</h4>
+<p><a href="{%url 'scenario1'%}">Scenario 1:</a> Does the tweet percentage of a city correlate with it's youth population?</p>
+<p><a href="{%url 'scenario2'%}">Scenario 2:</a> Do the diffrent languages used in tweets determine the different cultures of the city?</p>
+<p><a href="{%url 'scenario3'%}">Scenario 3:</a> Are happy people wealthy?(Happiness=Wealth?)</p>
+<p><a href="{%url 'scenario4'%}">Scenario 4:</a> Does the tweets of a city correlate with it's youth population</p>
+<p><a href="{%url 'scenario5'%}">Scenario 5:</a> Does the tweets of a city correlate with it's youth population</p>
+<p><a href="{%url 'scenario6'%}">Scenario 6:</a> Are vulgar words used in Twitter happen more in poor areas?</p>
+
+
+
+
+		</div>
+	</div>
+
+{% endblock %}

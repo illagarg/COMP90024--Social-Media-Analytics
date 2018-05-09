@@ -1,0 +1,68 @@
+Creating instance and waiting for it to enter the running status
+
+...
+
+It should all be running very soon...
+Thanks for waiting :)
+
+
+We replaced some of the parameters in our code just now using rpl command
+
+now waiting for the servers to ready and going to call Ansible soon
+
+...
+
+
+Now deploying DB cluster
+
+Waiting the shell script to run
+
+..
+
+Very quick, cluster should have been set up already
+
+
+Now setting up the main node as web server, harvester, analyuser
+
+
+Allow me to check the debug message real quick :)
+
+
+
+It can been seen that 3 nodes are set up using docker..
+
+Hopefully we will get something from the browser , or just the curl command
+
+
+It looks okay in the playbook output, lets started validating from a simple curl command
+
+This file is wriiten to the dir automatically while I was running the 
+
+run.py program
+
+
+DB seem to be working :))))))
+
+
+Now check the webserver
+
+Valllaaaaaaaaa!
+
+Altho the website constrution is not fully finished at this stage, 
+
+It can be showed that this automation program is capable of setting up
+
+apache+django envirnment. 
+
+We only need to replace the file and get the website running:)
+
+
+
+Thanks for watching! The demo will finish here!
+
+4 servers has been set up using Boto+ansible+shell+python script
+
+3 node couchDB cluster + 1 webserver !
+
+Thanks!
+

@@ -1,0 +1,6 @@
+#THIS IS FOR MAINDBNODE ROLE
+- name: 'Run the script to configure couchdb using docker'
+  become: yes 
+  command: ./test_2.sh
+  register: out
+- debug: var=out.stdout_lines
