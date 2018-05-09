@@ -220,7 +220,7 @@ docker volume prune
 )
 
 
-(cd data
+(cd couchDB
 rm _nodes.couch &&
 rm _users.couch &&
 rm _dbs.couch &&

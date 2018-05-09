@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-declare nodes=(115.146.85.192 115.146.86.208)
+#declare nodes=(115.146.85.192 115.146.86.208)
+declare nodes=(115.146.86.216 115.146.87.5 115.146.87.13)
 export masternode=`echo ${nodes} | cut -f1 -d' '` #the first element in that array
 export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
 export size=${#nodes[@]}

@@ -18,12 +18,31 @@
 <div class="thumbnail container " style="background-color:lightsilver;  border-style: solid; border-width: 5px;">
 		<div  align="left" style = " width =600px  " >
 			<h3 align="left">Scenario 2  - Description  :<br/></h3>
-			<p style="padding-left:10px">Are people happier (express more positive sentiment) in areas with more wealth?</p>
+			<p style="padding-left:10px">Does the different languages used when tweeting correlate with the cultures we would
+expect to find in those areas</p>
 		</div>
 		<div id="barchart"></div>
-
+		<h3>Different Languages in Cities(AURIN)</h3>
+		<div id="map_canvas" style="width:100%;height:500px;"></div>
+		<div>
+		<h3>Speakers of different Languages in cities</h3>
+		  <table class="table table-hover" width="50%">
+         <thead>
+		<tr><th>Place</th><th colspan=2>Chinese Speakers</th><th colspan=2>Korean Speakers</th><th colspan=2>Japanese Speakers</th><th colspan=2>Italian Speakers</th><th colspan=2>Spanish Speakers</th></tr></thead>
+		<thead>
+		<tr><th></th><th>Twitter</th><th>Aurin</th><th>Twitter</th><th>Aurin</th><th>Twitter</th><th>Aurin</th><th>Twitter</th><th>Aurin</th><th>Twitter</th><th>Aurin</th></tr></thead>
+		<tbody>
+		{% for city2 in maps_list1%}
+			{% for city1 in maps_list2%}
+			{% if city1.cityname == city2.cityname %}
+			<tr><td>{{city1.cityname}}</td><td>{{city2.infomsg}}</td><td>{{city1.infomsg}}</td><td>{{city2.infomsg2}}</td><td>{{city1.infomsg2}}</td><td>{{city2.infomsg3}}</td><td>{{city1.infomsg3}}</td><td>{{city2.infomsg4}}</td><td>{{city1.infomsg4}}</td><td>{{city2.infomsg5}}</td><td>{{city1.infomsg5}}</td></tr>
+			{%endif%}
+			{%endfor%}
+		{%endfor%}
+		</tbody>
+		</table>
+		</div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
 <script type="text/javascript">
 // Load google charts
 google.charts.load('current', {'packages':['corechart']});
@@ -31,23 +50,68 @@ google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-  ['Cities', 'Average Wealth'],
-  ['Sydney', 8],
-  ['Canberra',2],
-  ['Melbourne', 4],
-  ['Adelaide', 2],
-  ['Brisbane', 8]
-]);
+  var locations={{ maps_list1|safe }};
+var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Cities');
+data.addColumn('number', 'Chinese Speakers'); 
+data.addColumn('number', 'Korean Speakers'); 
+data.addColumn('number', 'Japanese Speakers'); 
+data.addColumn('number', 'Italian Speakers'); 
+data.addColumn('number', 'Spanish Speakers'); 
+data.addRows(locations.length);
+for  (var i = 0; i < locations.length; i++){
+  data.setCell(i,0,locations[i].cityname);
+  data.setCell(i,1,locations[i].infomsg);
+  data.setCell(i,2,locations[i].infomsg2);
+  data.setCell(i,3,locations[i].infomsg3);
+  data.setCell(i,4,locations[i].infomsg4);
+  data.setCell(i,5,locations[i].infomsg5);
 
+}
+  
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Average Wealth per Cities', 'width':550, 'height':400};
+  var options = {'title':'Different Languages in Cities(Twitter)', 'width':650,  'height':600};
 
   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.BarChart(document.getElementById('barchart'));
   chart.draw(data, options);
+
 }
 </script>
+
+	
+<script>
+function myMap() {
+    var map;
+    var myCenter=new google.maps.LatLng(-25.3636,134.2117);
+	var mapOptions = {center: myCenter, zoom: 4.5};       
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+	
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    var locations={{maps_list2|safe }};
+    for (i = 0; i < locations.length; i++) { 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+        map: map,
+	title: locations[i].cityname     
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent("City: "+locations[i].cityname+"<br/>"+locations[i].infotitle+" : "+locations[i].infomsg+"<br/>"+locations[i].infotitle2+" : "+locations[i].infomsg2+"<br/>"+locations[i].infotitle3+" : "+locations[i].infomsg3+"<br/>"+locations[i].infotitle4+" : "+locations[i].infomsg4+"<br/>"+locations[i].infotitle5+" : "+locations[i].infomsg5);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSHY2NJxQHVenuL0N4up_h5LMqm6n45Fc&callback=myMap"></script>
+
 
 </div>
 

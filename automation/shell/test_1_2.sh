@@ -17,10 +17,11 @@ echo ""
 
 echo "changing ownership of the whole couchDB folder"
 sudo chown -R ubuntu:ubuntu /home/ubuntu/couchDB
-
+sudo chmod -R 777 /home/ubuntu/couchDB
 
 echo "Declaring nodes, master nodes variables"
-declare nodes=(115.146.85.192 115.146.86.208)
+#declare nodes=(115.146.85.192 115.146.86.208)
+declare nodes=(115.146.86.216 115.146.87.5 115.146.87.13)
 export masternode=`echo ${nodes} | cut -f1 -d' '` #the first element in that array
 export othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
 export size=${#nodes[@]}
@@ -60,5 +61,7 @@ curl -XPUT "http://localhost:5984/_node/_local/_config/admins/${user}" --data "\
 curl -XPUT "http://${user}:${pass}@localhost:5984/_node/couchdb@${my_public_IP}/_config/chttpd/bind_address" --data '"0.0.0.0"'
 
 curl ${my_public_IP}:5984
+
+#curl -XPUT admin:password@localhost:5984/twitter
 
 echo "yes"

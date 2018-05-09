@@ -4,14 +4,14 @@
 #- hosts: dbservers
 #  roles:
 #     - dbservers
+- hosts: dbservers
+  roles:
+    - dbservers
 
-
+- hosts: masterdbnode
+  roles:
+    - masterdbnode
+    
 - hosts: mainnode
   roles:
     - mainnode
-
-#- hosts: dbservers
-#  roles:
-#    - dbservers
-    
-

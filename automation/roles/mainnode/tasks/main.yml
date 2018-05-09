@@ -1,3 +1,5 @@
+#this script is for deploying the main node server: harvester, analyser, aurin data upload to couchDB cluster
+
 - name: example copying file with owner and permissions
   copy:
     src: /home/x/COMP90024--Social-Media-Analytics/automation/zip.zip
@@ -28,18 +30,14 @@
     group: ubuntu
     mode: 0644
 
-
 - name: 'Make the script runnable'
   become: yes 
   command: sudo chmod +x total_apache.sh
   register: out
 - debug: var=out.stdout_lines
 
-- name: 'Run the script to install apache and django'
+- name: 'Run the script to install apache and django, harvest tweet, and analyse them, and upload AURIN data'
   become: yes 
   command: ./total_apache.sh
   register: out
 - debug: var=out.stdout_lines
-
-
-

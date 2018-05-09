@@ -1,6 +1,7 @@
 import boto
 from boto.ec2.regioninfo import RegionInfo
 import time
+from subprocess import call
 
 
 '''
@@ -136,3 +137,48 @@ def write_host_file_temp(IP):
             counter = counter+1
         f.write("%s ansible_user=ubuntu\r\n" % ip)
     f.close()
+
+
+def replace_ip_in_shell(IP):
+
+        # now replace script for setting up couchDB
+    string_1 = "declare REPLACE_nodes=(115.146.85.192 115.146.86.208)"
+
+    string_2 = (
+        "declare nodes=(%s %s %s)" % (IP[1], IP[2], IP[3]))
+
+    string_3 = "/home/x/COMP90024--Social-Media-Analytics/automation/shell/test_1_2.sh"
+
+    call(["rpl", string_1, string_2, string_3])
+
+    print("REPLACED test_1_2.sh")
+
+    # now replace script for setting up couchDB
+    string_1 = "declare REPLACE_nodes=(115.146.85.192 115.146.86.208)"
+
+    string_2 = (
+        "declare nodes=(%s %s %s)" % (IP[1], IP[2], IP[3]))
+
+    string_3 = "/home/x/COMP90024--Social-Media-Analytics/automation/shell/test_2.sh"
+
+    call(["rpl", string_1, string_2, string_3])
+
+    print("REPLACED test_1_2.sh")
+
+
+def replace_ip_in_django(IP):
+    string_1 = "REPLACE_THIS = ['www.cccteam17.com', 'cccteam.com', '115.146.86.170']"
+
+    string_2 = (
+        "ALLOWED_HOSTS = ['www.cccteam17.com', 'cccteam.com', '%s' ]" % IP[0])
+
+    string_3 = "/home/x/COMP90024--Social-Media-Analytics/automation/zip/cccteam17/cccteam17/settings.py"
+
+    call(["rpl", string_1, string_2, string_3])
+
+
+def wait(sec):
+    while sec > 0:
+        print(str(sec) + '     \r')
+        sec -= 1
+        time.sleep(1)
