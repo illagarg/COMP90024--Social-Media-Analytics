@@ -36,7 +36,7 @@ def scenario1(request):
 		break
 	userdict=json.loads(i);	
 	db = server['population']
-	with open("/home/ubuntu/zip/sc1.json", "r", encoding="utf8") as sc1:
+	with open("/home/ubuntu/data/sc1.json", "r", encoding="utf8") as sc1:
 		map1 = json.load(sc1)
 		for row in map1["features"]:
 			map=Maps()
@@ -79,7 +79,7 @@ def scenario2(request):
 		break
 	languagedict=json.loads(i);
 	db = server['lang_aurin']
-	with open("/home/ubuntu/zip/sc1.json", "r", encoding="utf8") as sc1:
+	with open("/home/ubuntu/data/sc1.json", "r", encoding="utf8") as sc1:
 		map1 = json.load(sc1)
 		for row in map1["features"]:
 			map=Maps()
@@ -162,7 +162,7 @@ def scenario3(request):
     db = server['income']
 	
 	
-    with open("/home/ubuntu/zip/sc1.json", "r", encoding="utf8") as sc1:
+    with open("/home/ubuntu/data/sc1.json", "r", encoding="utf8") as sc1:
         map1 = json.load(sc1)
         for row in map1["features"]:
              map=Maps()
@@ -178,7 +178,7 @@ def scenario3(request):
              map.lon=row['latlong'][1]
              map.infotitle="Average sentiment"
              map.infomsg=round(dict[city]/len(userdict[city]),4)
-             map.infomsg2=(i/t)*5;
+             map.infomsg2=round((i/t)*5,4);
              map.infotitle2="Number of Richer Households"
              map.save()
     twitterdata = Maps.objects.filter(mapname="map3").order_by('-infomsg').values('cityname','lat','lon','infotitle','infomsg','infotitle2','infomsg2')
@@ -194,7 +194,7 @@ def scenario4(request):
         i = docid['key']
         break
     tourdict=json.loads(i);
-    with open("/home/ubuntu/zip/sc1.json", "r", encoding="utf8") as sc1:
+    with open("/home/ubuntu/data/sc1.json", "r", encoding="utf8") as sc1:
         map1 = json.load(sc1)
         for row in map1["features"]:
              map=Maps()
@@ -212,7 +212,7 @@ def scenario4(request):
 
 
 def scenario5(request):
-	Maps.objects.filter(mapname="map5").delete()
+	Maps.objects.filter(mapname="data").delete()
 	server = couchdb.Server( url='http://115.146.86.96:5984')
 	db = server['crime']
 	for docid in db.view('Res/res'):
@@ -221,7 +221,7 @@ def scenario5(request):
 	crimedict=json.loads(i)
 	db=server['offences']
 	db1=server['income']
-	with open("/home/ubuntu/zip/sc1.json", "r", encoding="utf8") as sc1:
+	with open("/home/ubuntu/data/sc1.json", "r", encoding="utf8") as sc1:
 		map1 = json.load(sc1)
 		for row in map1["features"]:
 			map=Maps()

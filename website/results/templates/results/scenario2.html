@@ -22,10 +22,10 @@
 expect to find in those areas</p>
 		</div>
 		<div id="barchart"></div>
-		<h3>Different Languages in Cities(AURIN)</h3>
+		<h3>Speakers of different Languages in Cities(AURIN)</h3>
 		<div id="map_canvas" style="width:100%;height:500px;"></div>
 		<div>
-		<h3>Speakers of different Languages in cities</h3>
+		<h3>Tweeters of different Languages in Cities</h3>
 		  <table class="table table-hover" width="50%">
          <thead>
 		<tr><th>Place</th><th colspan=2>Chinese Speakers</th><th colspan=2>Korean Speakers</th><th colspan=2>Japanese Speakers</th><th colspan=2>Italian Speakers</th><th colspan=2>Spanish Speakers</th></tr></thead>
@@ -53,11 +53,11 @@ function drawChart() {
   var locations={{ maps_list1|safe }};
 var data = new google.visualization.DataTable();
   data.addColumn('string', 'Cities');
-data.addColumn('number', 'Chinese Speakers'); 
-data.addColumn('number', 'Korean Speakers'); 
-data.addColumn('number', 'Japanese Speakers'); 
-data.addColumn('number', 'Italian Speakers'); 
-data.addColumn('number', 'Spanish Speakers'); 
+data.addColumn('number', 'Chinese Tweeters'); 
+data.addColumn('number', 'Korean Tweeters'); 
+data.addColumn('number', 'Japanese Tweeters'); 
+data.addColumn('number', 'Italian Tweeters'); 
+data.addColumn('number', 'Spanish Tweeters'); 
 data.addRows(locations.length);
 for  (var i = 0; i < locations.length; i++){
   data.setCell(i,0,locations[i].cityname);
@@ -70,7 +70,7 @@ for  (var i = 0; i < locations.length; i++){
 }
   
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Different Languages in Cities(Twitter)', 'width':650,  'height':600};
+  var options = {'title':'Tweeters of different Languages in Cities(Twitter)', 'width':650,  'height':600};
 
   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.BarChart(document.getElementById('barchart'));
